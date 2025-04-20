@@ -46,7 +46,7 @@ module Fastlane
 
             envfile = cipher.update(encrypted) + cipher.final
             File.write(project_root + "/.env." + environment, envfile)
-            FileUtils.rm_rf(dir)
+
           end
 
             envfile = File.read(project_root + "/.env." + environment)
@@ -70,7 +70,7 @@ module Fastlane
             system("git add .", chdir: dir)
             system("git commit -m 'Add .env.#{environment}'", chdir: dir)
             system("git push origin #{repo_branch}", chdir: dir)
-            FileUtils.rm_rf(dir)
+
         end
         
       end
