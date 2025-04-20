@@ -5,7 +5,7 @@ module Fastlane
   module Actions
     class MatchEnvfileAction < Action
       def self.run(params)
-        UI.message("The match_envfile plugin is working!")
+        UI.message("The match_envfile plugin is working! #{params}")
       end
 
       def self.description
