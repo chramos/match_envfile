@@ -16,6 +16,9 @@ module Fastlane
         readonly = params[:readonly]
         password = params[:password]
 
+        puts "================================================"
+        puts "password: #{password}"
+        puts "================================================"
         project_root = Dir.pwd
 
         if project_root.include?("ios")
